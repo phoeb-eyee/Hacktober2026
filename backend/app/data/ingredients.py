@@ -1,0 +1,407 @@
+"""Curated ingredient knowledge base.
+
+These records are hand-authored educational summaries of publicly documented
+ingredient information. They are NOT copied from CosIng (whose INCI data is
+third-party IP). CosIng and other public institutional sources are cited as
+references, not imported.
+
+Content is intentionally hedged: ingredient functions are distinguished from
+proven clinical benefits, and missing/uncertain information is left empty rather
+than fabricated. `verification_status` is conservative — most records are
+"provisional" pending formal review.
+"""
+
+INGREDIENTS: list[dict] = [
+    {
+        "ingredient_id": "glycerin",
+        "canonical_name": "Glycerin",
+        "aliases": ["glycerol", "glycerine"],
+        "ingredient_category": "Humectant",
+        "primary_functions": ["Humectant", "Skin conditioning"],
+        "short_description": "A humectant that draws water into the outer layer of skin.",
+        "mechanism_of_action": "A small, water-soluble molecule that attracts and binds water, helping draw moisture into the outer layer of skin.",
+        "evidence_supported_benefits": [
+            "Supports skin hydration when used in moisturizing products.",
+            "Can improve the feel of dry skin.",
+        ],
+        "common_side_effects": ["Generally well tolerated."],
+        "usage_considerations": [
+            "Commonly used in cleansers and moisturizers.",
+            "Works best in products designed to leave the skin hydrated.",
+        ],
+        "relevant_populations_or_precautions": [],
+        "source_references": [
+            {"name": "CosIng (European Commission)", "url": "https://ec.europa.eu/growth/tools-databases/cosing/", "kind": "regulatory"},
+            {"name": "American Academy of Dermatology Association", "url": "https://www.aad.org/", "kind": "clinical_guidance"},
+        ],
+        "evidence_quality": "Well-established",
+        "last_reviewed": "2026-10-25",
+        "verification_status": "verified",
+    },
+    {
+        "ingredient_id": "hyaluronic-acid",
+        "canonical_name": "Hyaluronic Acid",
+        "aliases": ["hyaluronan", "sodium hyaluronate", "ha"],
+        "ingredient_category": "Humectant",
+        "primary_functions": ["Humectant"],
+        "short_description": "A moisture-binding ingredient that helps skin hold onto water.",
+        "mechanism_of_action": "A large sugar molecule that binds many times its weight in water, helping the skin retain moisture.",
+        "evidence_supported_benefits": [
+            "May temporarily improve skin hydration and plumpness.",
+            "Often used to improve the feel of dry skin.",
+        ],
+        "common_side_effects": ["Generally well tolerated."],
+        "usage_considerations": [
+            "Works best when skin is damp or a moisturizer is applied over it.",
+        ],
+        "relevant_populations_or_precautions": [],
+        "source_references": [
+            {"name": "CosIng (European Commission)", "url": "https://ec.europa.eu/growth/tools-databases/cosing/", "kind": "regulatory"},
+        ],
+        "evidence_quality": "Well-established (as a humectant); cosmetic hydration effects vary",
+        "last_reviewed": "2026-10-25",
+        "verification_status": "provisional",
+    },
+    {
+        "ingredient_id": "niacinamide",
+        "canonical_name": "Niacinamide",
+        "aliases": ["nicotinamide", "vitamin b3"],
+        "ingredient_category": "Multifunctional (Vitamin B3)",
+        "primary_functions": ["Skin conditioning", "Barrier support"],
+        "short_description": "A versatile vitamin B3 used for barrier support and tone.",
+        "mechanism_of_action": "A form of vitamin B3 involved in cellular energy and skin-barrier processes.",
+        "evidence_supported_benefits": [
+            "May help improve the appearance of uneven tone and enlarged pores (evidence varies).",
+            "Can support skin barrier function.",
+        ],
+        "common_side_effects": [
+            "Generally well tolerated.",
+            "May cause mild irritation in some people at higher concentrations.",
+        ],
+        "usage_considerations": [
+            "Often used in serums and moisturizers.",
+            "Usually well tolerated alongside many other ingredients.",
+        ],
+        "relevant_populations_or_precautions": [],
+        "source_references": [
+            {"name": "CosIng (European Commission)", "url": "https://ec.europa.eu/growth/tools-databases/cosing/", "kind": "regulatory"},
+            {"name": "PubMed (NIH)", "url": "https://pubmed.ncbi.nlm.nih.gov/", "kind": "educational"},
+        ],
+        "evidence_quality": "Moderate",
+        "last_reviewed": "2026-10-25",
+        "verification_status": "provisional",
+    },
+    {
+        "ingredient_id": "ascorbic-acid",
+        "canonical_name": "Ascorbic Acid (Vitamin C)",
+        "aliases": ["vitamin c", "l-ascorbic acid", "vitamin c serum"],
+        "ingredient_category": "Antioxidant",
+        "primary_functions": ["Antioxidant"],
+        "short_description": "A potent water-soluble antioxidant form of vitamin C.",
+        "mechanism_of_action": "A water-soluble antioxidant that helps neutralize free radicals and supports collagen-related processes.",
+        "evidence_supported_benefits": [
+            "May provide antioxidant protection, especially when used in the morning with sunscreen.",
+            "May help improve the appearance of photoaged skin (evidence varies by formulation).",
+        ],
+        "common_side_effects": [
+            "Can be irritating, especially at higher concentrations or lower pH.",
+            "May cause tingling.",
+        ],
+        "usage_considerations": [
+            "Best in a stable, well-formulated product.",
+            "Often used in the morning alongside sunscreen.",
+        ],
+        "relevant_populations_or_precautions": [
+            "Can increase skin sensitivity; introduce gradually.",
+        ],
+        "source_references": [
+            {"name": "CosIng (European Commission)", "url": "https://ec.europa.eu/growth/tools-databases/cosing/", "kind": "regulatory"},
+            {"name": "PubMed (NIH)", "url": "https://pubmed.ncbi.nlm.nih.gov/", "kind": "educational"},
+        ],
+        "evidence_quality": "Moderate (antioxidant role well-established; cosmetic benefits formulation-dependent)",
+        "last_reviewed": "2026-10-25",
+        "verification_status": "provisional",
+    },
+    {
+        "ingredient_id": "tocopherol",
+        "canonical_name": "Tocopherol (Vitamin E)",
+        "aliases": ["vitamin e", "alpha-tocopherol", "tocopheryl acetate"],
+        "ingredient_category": "Antioxidant",
+        "primary_functions": ["Antioxidant", "Emollient"],
+        "short_description": "A fat-soluble antioxidant that helps protect skin lipids.",
+        "mechanism_of_action": "A fat-soluble antioxidant that helps protect lipids in the skin from oxidative damage.",
+        "evidence_supported_benefits": [
+            "May provide antioxidant support.",
+            "Commonly used as a stabilizer or co-antioxidant in formulations.",
+        ],
+        "common_side_effects": ["Generally well tolerated."],
+        "usage_considerations": ["Often combined with vitamin C in antioxidant serums."],
+        "relevant_populations_or_precautions": [],
+        "source_references": [
+            {"name": "CosIng (European Commission)", "url": "https://ec.europa.eu/growth/tools-databases/cosing/", "kind": "regulatory"},
+        ],
+        "evidence_quality": "Moderate",
+        "last_reviewed": "2026-10-25",
+        "verification_status": "provisional",
+    },
+    {
+        "ingredient_id": "ferulic-acid",
+        "canonical_name": "Ferulic Acid",
+        "aliases": ["ferulic acid"],
+        "ingredient_category": "Antioxidant",
+        "primary_functions": ["Antioxidant"],
+        "short_description": "A plant-derived antioxidant often paired with vitamins C and E.",
+        "mechanism_of_action": "A plant-derived antioxidant that can help stabilize and enhance other antioxidants such as vitamins C and E.",
+        "evidence_supported_benefits": [
+            "Commonly combined with vitamins C and E to improve antioxidant stability.",
+            "May contribute to photoprotection when used with sunscreen.",
+        ],
+        "common_side_effects": ["Generally well tolerated."],
+        "usage_considerations": ["Typically found in antioxidant serums."],
+        "relevant_populations_or_precautions": [],
+        "source_references": [
+            {"name": "CosIng (European Commission)", "url": "https://ec.europa.eu/growth/tools-databases/cosing/", "kind": "regulatory"},
+        ],
+        "evidence_quality": "Limited to moderate",
+        "last_reviewed": "2026-10-25",
+        "verification_status": "provisional",
+    },
+    {
+        "ingredient_id": "retinol",
+        "canonical_name": "Retinol",
+        "aliases": ["vitamin a", "retinyl"],
+        "ingredient_category": "Retinoid (cosmetic)",
+        "primary_functions": ["Skin renewal", "Anti-acne (cosmetic use)"],
+        "short_description": "A vitamin A derivative that influences skin-cell turnover.",
+        "mechanism_of_action": "A vitamin A derivative that is converted in skin to retinoic acid and influences skin-cell turnover.",
+        "evidence_supported_benefits": [
+            "May help improve the appearance of fine lines and photoaging over time.",
+            "Commonly used for acne-prone skin in a cosmetic context.",
+        ],
+        "common_side_effects": [
+            "Dryness, redness, peeling, and irritation, especially when first introduced.",
+        ],
+        "usage_considerations": [
+            "Usually applied at night.",
+            "Introduce gradually and pair with moisturizer and sunscreen.",
+        ],
+        "relevant_populations_or_precautions": [
+            "Not recommended during pregnancy (general retinoid precaution); consult a clinician.",
+        ],
+        "source_references": [
+            {"name": "CosIng (European Commission)", "url": "https://ec.europa.eu/growth/tools-databases/cosing/", "kind": "regulatory"},
+            {"name": "American Academy of Dermatology Association", "url": "https://www.aad.org/", "kind": "clinical_guidance"},
+        ],
+        "evidence_quality": "Moderate (weaker than tretinoin; cosmetic concentration)",
+        "last_reviewed": "2026-10-25",
+        "verification_status": "provisional",
+    },
+    {
+        "ingredient_id": "tretinoin",
+        "canonical_name": "Tretinoin",
+        "aliases": ["retinoic acid", "all-trans retinoic acid", "retin-a"],
+        "ingredient_category": "Topical retinoid (prescription)",
+        "primary_functions": ["Acne treatment", "Photoaging treatment (per approved indications)"],
+        "short_description": "A prescription retinoid used for acne and certain photoaging concerns.",
+        "mechanism_of_action": "A prescription retinoid that binds retinoic acid receptors and influences gene expression involved in skin-cell differentiation and turnover.",
+        "evidence_supported_benefits": [
+            "Approved for the treatment of acne.",
+            "Approved for certain photoaging indications, depending on the product and region.",
+        ],
+        "common_side_effects": [
+            "Dryness, redness, peeling, and irritation.",
+            "Increased sun sensitivity.",
+        ],
+        "usage_considerations": [
+            "Use exactly as prescribed.",
+            "Usually applied at night in a pea-sized amount.",
+            "Use a broad-spectrum sunscreen during the day.",
+        ],
+        "relevant_populations_or_precautions": [
+            "Avoid in pregnancy and when trying to conceive; follow the prescribing clinician's instructions.",
+            "Do not combine with other irritating actives without professional guidance.",
+        ],
+        "source_references": [
+            {"name": "MedlinePlus (NIH) — Tretinoin Topical", "url": "https://medlineplus.gov/druginfo/meds/a682437.html", "kind": "educational"},
+            {"name": "American Academy of Dermatology Association", "url": "https://www.aad.org/", "kind": "clinical_guidance"},
+        ],
+        "evidence_quality": "Well-established (prescription medicine)",
+        "last_reviewed": "2026-10-25",
+        "verification_status": "verified",
+    },
+    {
+        "ingredient_id": "ceramides",
+        "canonical_name": "Ceramides",
+        "aliases": ["ceramide np", "ceramide", "ceramide 3", "ceramide 6-ii", "ceramide ap", "ceramide eop"],
+        "ingredient_category": "Skin-barrier lipid",
+        "primary_functions": ["Skin-barrier support", "Moisturizing"],
+        "short_description": "Lipids that help support the skin barrier.",
+        "mechanism_of_action": "Lipids naturally found in the skin's outer layer that help form the barrier and retain moisture.",
+        "evidence_supported_benefits": [
+            "May help support the skin barrier.",
+            "Often used in moisturizers for dry or barrier-compromised skin.",
+        ],
+        "common_side_effects": ["Generally well tolerated."],
+        "usage_considerations": ["Common in moisturizers, often with humectants and emollients."],
+        "relevant_populations_or_precautions": [],
+        "source_references": [
+            {"name": "CosIng (European Commission)", "url": "https://ec.europa.eu/growth/tools-databases/cosing/", "kind": "regulatory"},
+        ],
+        "evidence_quality": "Moderate",
+        "last_reviewed": "2026-10-25",
+        "verification_status": "provisional",
+    },
+    {
+        "ingredient_id": "squalane",
+        "canonical_name": "Squalane",
+        "aliases": ["squalane"],
+        "ingredient_category": "Emollient",
+        "primary_functions": ["Emollient", "Skin conditioning"],
+        "short_description": "A lightweight emollient that softens skin and reduces water loss.",
+        "mechanism_of_action": "A stable saturated hydrocarbon that softens and smooths skin and helps reduce water loss.",
+        "evidence_supported_benefits": [
+            "Helps soften skin.",
+            "Lightweight moisturizing effect.",
+        ],
+        "common_side_effects": ["Generally well tolerated."],
+        "usage_considerations": ["Used in moisturizers, serums, and facial oils."],
+        "relevant_populations_or_precautions": [],
+        "source_references": [
+            {"name": "CosIng (European Commission)", "url": "https://ec.europa.eu/growth/tools-databases/cosing/", "kind": "regulatory"},
+        ],
+        "evidence_quality": "Well-established (as an emollient)",
+        "last_reviewed": "2026-10-25",
+        "verification_status": "provisional",
+    },
+    {
+        "ingredient_id": "panthenol",
+        "canonical_name": "Panthenol",
+        "aliases": ["provitamin b5", "d-panthenol", "pantothenol"],
+        "ingredient_category": "Humectant / Barrier support",
+        "primary_functions": ["Humectant", "Skin conditioning", "Barrier support"],
+        "short_description": "A pro-vitamin B5 that supports hydration and skin comfort.",
+        "mechanism_of_action": "A provitamin that converts to vitamin B5 and supports skin hydration and repair processes.",
+        "evidence_supported_benefits": [
+            "May support skin hydration and soothe irritation.",
+            "Commonly used in barrier-support products.",
+        ],
+        "common_side_effects": ["Generally well tolerated."],
+        "usage_considerations": ["Found in moisturizers and soothing products."],
+        "relevant_populations_or_precautions": [],
+        "source_references": [
+            {"name": "CosIng (European Commission)", "url": "https://ec.europa.eu/growth/tools-databases/cosing/", "kind": "regulatory"},
+        ],
+        "evidence_quality": "Moderate",
+        "last_reviewed": "2026-10-25",
+        "verification_status": "provisional",
+    },
+    {
+        "ingredient_id": "zinc-oxide",
+        "canonical_name": "Zinc Oxide",
+        "aliases": ["zinc oxide"],
+        "ingredient_category": "Mineral UV filter",
+        "primary_functions": ["Sunscreen (UV filter)", "Skin protectant"],
+        "short_description": "A mineral sunscreen filter that reflects and scatters UV radiation.",
+        "mechanism_of_action": "A mineral that sits on the skin surface and reflects and scatters UV radiation.",
+        "evidence_supported_benefits": [
+            "Provides broad-spectrum UV protection.",
+            "Generally well tolerated; often used in mineral sunscreens.",
+        ],
+        "common_side_effects": [
+            "Can leave a white cast.",
+            "Generally low irritation.",
+        ],
+        "usage_considerations": ["Apply as directed for sun protection and reapply as needed."],
+        "relevant_populations_or_precautions": [],
+        "source_references": [
+            {"name": "American Academy of Dermatology Association", "url": "https://www.aad.org/", "kind": "clinical_guidance"},
+        ],
+        "evidence_quality": "Well-established (UV filter)",
+        "last_reviewed": "2026-10-25",
+        "verification_status": "verified",
+    },
+    {
+        "ingredient_id": "salicylic-acid",
+        "canonical_name": "Salicylic Acid",
+        "aliases": ["bha", "beta hydroxy acid"],
+        "ingredient_category": "Exfoliant (BHA)",
+        "primary_functions": ["Exfoliant", "Acne treatment (OTC)"],
+        "short_description": "A lipid-soluble BHA that exfoliates within pores.",
+        "mechanism_of_action": "A beta hydroxy acid that helps exfoliate within pores by dissolving debris; it is lipid-soluble.",
+        "evidence_supported_benefits": [
+            "Commonly used for acne and clogged pores.",
+            "Helps smooth skin texture.",
+        ],
+        "common_side_effects": ["Dryness, irritation, and peeling at higher concentrations."],
+        "usage_considerations": [
+            "Often used as a leave-on or in cleansers.",
+            "Can be drying; pair with a moisturizer.",
+        ],
+        "relevant_populations_or_precautions": ["Can increase sensitivity to other actives."],
+        "source_references": [
+            {"name": "MedlinePlus (NIH)", "url": "https://medlineplus.gov/", "kind": "educational"},
+            {"name": "American Academy of Dermatology Association", "url": "https://www.aad.org/", "kind": "clinical_guidance"},
+        ],
+        "evidence_quality": "Well-established (OTC acne)",
+        "last_reviewed": "2026-10-25",
+        "verification_status": "verified",
+    },
+    {
+        "ingredient_id": "glycolic-acid",
+        "canonical_name": "Glycolic Acid",
+        "aliases": ["aha", "alpha hydroxy acid"],
+        "ingredient_category": "Exfoliant (AHA)",
+        "primary_functions": ["Exfoliant", "Skin smoothing"],
+        "short_description": "A water-soluble AHA that exfoliates the skin surface.",
+        "mechanism_of_action": "A water-soluble alpha hydroxy acid that exfoliates the skin surface by loosening bonds between dead skin cells.",
+        "evidence_supported_benefits": [
+            "Helps smooth skin texture and improve radiance.",
+            "May help with the appearance of photoaging at higher strengths.",
+        ],
+        "common_side_effects": ["Irritation, stinging, and increased sun sensitivity."],
+        "usage_considerations": [
+            "Often used at lower strengths in at-home products.",
+            "Use sunscreen during the day.",
+        ],
+        "relevant_populations_or_precautions": [
+            "Can increase sensitivity; avoid combining with other strong exfoliants or retinoids without care.",
+        ],
+        "source_references": [
+            {"name": "American Academy of Dermatology Association", "url": "https://www.aad.org/", "kind": "clinical_guidance"},
+        ],
+        "evidence_quality": "Well-established (exfoliation)",
+        "last_reviewed": "2026-10-25",
+        "verification_status": "verified",
+    },
+    {
+        "ingredient_id": "benzoyl-peroxide",
+        "canonical_name": "Benzoyl Peroxide",
+        "aliases": ["bpo", "benzoyl peroxide"],
+        "ingredient_category": "Acne treatment",
+        "primary_functions": ["Antimicrobial", "Acne treatment (OTC)"],
+        "short_description": "An antimicrobial acne treatment that also helps unclog pores.",
+        "mechanism_of_action": "Releases oxygen that helps reduce Cutibacterium acnes (acne bacteria) and has keratolytic effects.",
+        "evidence_supported_benefits": [
+            "Commonly used for inflammatory acne.",
+            "Reduces acne-causing bacteria.",
+        ],
+        "common_side_effects": [
+            "Dryness, irritation, and peeling.",
+            "Can bleach fabric and hair.",
+        ],
+        "usage_considerations": [
+            "Apply as directed.",
+            "Can bleach clothing and towels — allow it to dry.",
+        ],
+        "relevant_populations_or_precautions": [
+            "Can oxidize or inactivate some other ingredients (e.g., tretinoin) when applied at the same time.",
+        ],
+        "source_references": [
+            {"name": "MedlinePlus (NIH)", "url": "https://medlineplus.gov/", "kind": "educational"},
+            {"name": "American Academy of Dermatology Association", "url": "https://www.aad.org/", "kind": "clinical_guidance"},
+        ],
+        "evidence_quality": "Well-established (OTC acne)",
+        "last_reviewed": "2026-10-25",
+        "verification_status": "verified",
+    },
+]
