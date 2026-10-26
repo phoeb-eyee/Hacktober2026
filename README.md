@@ -6,9 +6,7 @@ SkinSync is a multimodal skincare education and routine-analysis app. Photograph
 product, understand its ingredients, and learn how it fits into your routine
 before you buy it — powered by Google's Gemma 4 multimodal model.
 
-> **Status:** Complete — all eight phases implemented and tested.
->
-> 📖 [Architecture](ARCHITECTURE.md) · 🎬 [Demo script](DEMO.md)
+> 📖 [Architecture](ARCHITECTURE.md) 
 
 ## Repository layout
 
@@ -83,16 +81,5 @@ accuracy has not been measured and requires a real-photo evaluation set.
 - The analysis report compares a candidate product against your saved routine
   via `POST /api/analyze`, with every finding traceable to a curated interaction
   record and every ingredient selectable to its detail page.
-
-## Roadmap (brief)
-
-1. Visual foundation & shell ✅
-2. Product inventory & routine builder ✅
-3. Gemma 4 image-understanding integration ✅
-4. Ingredient knowledge base & educational explorer ✅ *(current)*
-5. Compatibility & redundancy engine ✅
-6. Personalized analysis & education UI ✅
-7. Testing, reliability & evaluation ✅
-8. Final polish & demo ✅
 
 Skincare information is educational and does not replace professional medical advice.
